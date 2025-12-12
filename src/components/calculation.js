@@ -42,8 +42,8 @@ export default function calculate(expression) {
     if (!isNaN(token)) {
       stack.push(token);
     } else {
-      const operand2 = stack.pop();
-      const operand1 = stack.pop();
+      const operand2 = Number(stack.pop());
+      const operand1 = Number(stack.pop());
 
       switch (token) {
         case '+':
@@ -62,7 +62,5 @@ export default function calculate(expression) {
     }
   }
 
-  const result = stack.pop();
-
-  return isNaN(result) ? '0' : result;
+  return stack.pop();
 }

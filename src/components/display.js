@@ -105,5 +105,5 @@ export function handleDisplayWriteDot(display) {
 }
 
 export function handleDisplayEqual(display, result) {
-  display.textContent = result;
+  display.textContent = result === '' ? '0' : result;
 }
