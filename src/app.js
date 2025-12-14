@@ -56,3 +56,9 @@ equal.addEventListener('click', () => {
   const result = calculate(display.textContent, operators);
   handleDisplayEqual(display, result);
 });
+
+const theme = document.querySelector('.btn-change-theme');
+
+theme.addEventListener('click', () => {
+  document.body.classList.toggle('light');
+});

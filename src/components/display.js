@@ -99,11 +99,11 @@ export function handleDisplayWriteDot(display) {
 
   const lastElement = display.textContent.split(' ').pop();
 
-  if (!isNaN(lastElement) && !lastElement.includes('.')) {
+  if (lastElement !== '' && !isNaN(lastElement) && !lastElement.includes('.')) {
     display.textContent += '.';
   }
 }
 
 export function handleDisplayEqual(display, result) {
-  display.textContent = result === '' ? '0' : result;
+  display.textContent = result === '' || isNaN(result) ? '0' : result;
 }
