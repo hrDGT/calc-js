@@ -30,6 +30,7 @@ body {
 }
 
 .calc {
+  width: 300px;
   margin: 0 8px;
   color: #fff;
   background-color: #333;
