@@ -61,3 +61,33 @@ const theme = document.querySelector('.btn-change-theme');
 theme.addEventListener('click', () => {
   document.body.classList.toggle('light');
 });
+
+addEventListener('keydown', (event) => {
+  if (event.key >= '0' && event.key <= '9') {
+    handleDisplayWriteNumber(display, event.key);
+    return;
+  }
+
+  if (operators_array.includes(event.key)) {
+    handleDisplayWriteOperator(display, event.key, operators_array);
+    return;
+  }
+
+  switch (event.key) {
+    case '%':
+      handleDisplayPercent(display, operators_array);
+      break;
+    case '.':
+      handleDisplayWriteDot(display);
+      break;
+    case 'Enter':
+      handleDisplayEqual(
+        display,
+        calculate(display.textContent, operators_array)
+      );
+      break;
+    case 'Escape':
+      handleDisplayClear(display);
+      break;
+  }
+});
