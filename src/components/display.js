@@ -1,5 +1,3 @@
-'use strict';
-
 function getLastOperatorIndex(text, operators) {
   for (let i = text.length - 1; i >= 0; i--) {
     if (operators.includes(text[i])) {

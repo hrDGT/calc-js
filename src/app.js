@@ -1,5 +1,4 @@
-'use strict';
-
+import './style.css';
 import {
   handleDisplayWriteNumber,
   handleDisplayWriteOperator,

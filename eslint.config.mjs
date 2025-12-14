@@ -12,6 +12,7 @@ export default defineConfig([
       'no-console': 'warn',
       eqeqeq: 'warn',
       'no-else-return': 'warn'
-    }
+    },
+    ignores: ['node_modules/**', 'dist/**', 'webpack.config.js']
   }
 ]);

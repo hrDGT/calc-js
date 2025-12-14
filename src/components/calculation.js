@@ -1,5 +1,3 @@
-'use strict';
-
 function toRpnArray(expression) {
   const tokens = expression.replace(/[()]/g, '').split(' ');
 
